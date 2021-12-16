@@ -1,19 +1,24 @@
-import React from 'react'
+
 import "./header.scss";
 
- const Header = () => {
+import { useState } from "react";
+
+interface Props {
+  searchText: string;
+  setSearchText: (search: string) => void;
+}
+const Header = ({searchText, setSearchText}: Props) => {
+  
   return (
     <header className="main-header">
-      <h1 className="main-header__title">
-       Meetup
-      </h1>
+      <h1 className="main-header__title">Meetup</h1>
       <div>
         {/* <form className="main-header__search-box" onSubmit={props.handleSearch}> */}
         <form className="main-header__search-box">
           <input
-            type="search"
-            placeholder="Add an event..."
-            required
+            type="text"
+            value={searchText}
+            onChange={event => setSearchText(event.target.value)}
             // value={props.search}
             // onChange={(e) => props.setSearch(e.target.value)}
           />
@@ -21,7 +26,6 @@ import "./header.scss";
       </div>
     </header>
   );
-}
-
+};
 
 export default Header;

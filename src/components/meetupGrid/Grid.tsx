@@ -36,6 +36,7 @@ const data: Meetup[] = [
   },
 ];
 
+
 const Grid = () => {
   // const testData: Meetup = { title: "test", date: "test" };
   return (
