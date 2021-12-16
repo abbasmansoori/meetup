@@ -1,0 +1,6 @@
+.card-grid{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    text-decoration: none;
+}

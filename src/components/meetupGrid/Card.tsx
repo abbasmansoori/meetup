@@ -1,8 +1,15 @@
-const Card = () => {
+import {Meetup} from "../../models/Meetup";
+import "./Card.scss";
+interface Props {
+  meetup: Meetup;
+  
+}
+
+const Card = ({meetup}: Props) => {
   return (
     <section className="card">
-      <h3>Movie Night.</h3>
-      <p>2021-12-10</p>
+      <h3>{meetup.title}</h3>
+      <p>{meetup.date}</p>
     </section>
   );
 };
