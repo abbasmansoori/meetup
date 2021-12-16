@@ -12,7 +12,7 @@ import "./header.scss";
         <form className="main-header__search-box">
           <input
             type="search"
-            placeholder="Search for an event"
+            placeholder="Add an event..."
             required
             // value={props.search}
             // onChange={(e) => props.setSearch(e.target.value)}
