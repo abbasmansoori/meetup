@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <Header searchText={searchString} setSearchText={setSearchString} />
-      
-      <Grid />
+      <Grid searchText={searchString} />
+
       
     </div>
   );

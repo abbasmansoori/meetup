@@ -1,6 +1,7 @@
 import Card from "./Card";
 import { Meetup } from "../../models/Meetup";
 import "./grid.scss";
+import { useEffect, useState } from "react";
 
 const data: Meetup[] = [
   {
@@ -36,12 +37,24 @@ const data: Meetup[] = [
   },
 ];
 
+interface Props {
+  searchText: string;
+}
 
-const Grid = () => {
-  // const testData: Meetup = { title: "test", date: "test" };
+const Grid: React.FC<Props> = ({searchText}) => {
+  const [filteredEvents, setFilteredEvents] = useState<Meetup[]>([...data]);
+  useEffect(() => {
+   if(searchText){
+    const searchFilter = filteredEvents.filter(event=> (event.title.toLowerCase().includes(searchText.toLowerCase()) ))
+    setFilteredEvents([...searchFilter])
+   }else{
+     setFilteredEvents([...data])
+   }
+    
+  }, [searchText])
   return (
     <main className="card-grid">
-      {data.map((meetup) => (
+      {filteredEvents.map((meetup) => (
         <Card key={meetup.id} meetup={meetup} />
       ))}
     </main>

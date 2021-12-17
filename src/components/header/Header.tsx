@@ -20,7 +20,7 @@ const Header = ({searchText, setSearchText}: Props) => {
             value={searchText}
             onChange={event => setSearchText(event.target.value)}
             // value={props.search}
-            // onChange={(e) => props.setSearch(e.target.value)}
+            // onChange={(e) => props.setSearchTe(e.target.value)}
           />
         </form>
       </div>

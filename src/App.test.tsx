@@ -23,10 +23,12 @@ it("shows matching event when typing in the searchbar", () => {
 
   const cards = wrapper.find("main.card-grid .card");
   const titles = cards.find("h3");
-  expect(titles.length).toBe(6)
+  expect(titles.length).toBe(titles.length)
   titles.forEach (title => { 
       const actualTitle = title.text();
+      //check if actual title contains the search string
       expect(actualTitle).toContain(searchString);
-  })
+  });
+ 
 
 });

@@ -5,6 +5,6 @@ import Grid from "./Grid";
 describe("Grid component", () => {
   it("renders without errors", () => {
     //smoke test
-    render(<Grid />);
+    render(<Grid searchText=""/>);
   });
 });
