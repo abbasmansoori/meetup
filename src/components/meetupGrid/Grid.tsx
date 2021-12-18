@@ -57,7 +57,6 @@ export const data: Meetup[] = [
 
 interface Props {
   searchText: string,
-
   
   
 }

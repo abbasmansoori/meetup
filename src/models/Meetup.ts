@@ -5,5 +5,6 @@ export interface Meetup {
     name: string;
     rating: number;
     note: string;
+    attending?: string
 
 }

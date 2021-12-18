@@ -6,11 +6,11 @@ import { useState } from "react";
 
 function App() {
   const [searchString, setSearchString] = useState<string>("");
-  const [people, setPeople] = useState<string>("");
+  
   return (
     <div className="App">
       <Header searchText={searchString} setSearchText={setSearchString} />
-      <Grid searchText={searchString}  />
+      <Grid searchText={searchString}   />
 
       
     </div>
