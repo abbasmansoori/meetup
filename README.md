@@ -6,5 +6,5 @@
 
 - As a user i want to be able to rate events.
 
-- As a user i want to be able to comment on past events.
+- As a user i want to be able to comment on events.
 
