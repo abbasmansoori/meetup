@@ -20,12 +20,7 @@ export interface IState{
 const Card = ({ meetup }: Props) => {
   
   const [people, setPeople] = useState<IState["people"]>([
-    {
-      name: "Random Person",
-      rating: 5,
-      note: "It was a great meetup",
-      attending: "yes"
-    }
+    
   ])
 
  
@@ -33,8 +28,8 @@ const Card = ({ meetup }: Props) => {
 
   return (
     <section className="card">
-      <h3>{meetup.title}</h3>
-      <p>{meetup.date}</p>
+      <h3 className="card-title">{meetup.title}</h3>
+      <p className="card-date">{meetup.date}</p>
       <List people={people} />
       <AddToList people={people} setPeople={setPeople}/>
       

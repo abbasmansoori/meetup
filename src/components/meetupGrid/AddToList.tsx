@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {IState as Props} from "../meetupGrid/Card";
-
+import "./addtolist.scss";
 
 interface IProps {
     people: Props["people"]
@@ -60,11 +60,11 @@ const AddToList: React.FC<IProps> = ({people, setPeople}) => {
     }
 
     return (
-        <div className='AddToList'>
+        <div className='addtolist'>
             <input 
             type="text"
             placeholder="Name"
-            className='AddToList-input'
+            className='addtolist-input'
             value={input.name}
             onChange={handleChange}
             name="name"
@@ -73,7 +73,7 @@ const AddToList: React.FC<IProps> = ({people, setPeople}) => {
             <input 
             type="number"
             placeholder="Rating"
-            className='AddToList-input'
+            className='addtolist-input'
             value={input.rating}
             onChange={handleChange}
             name="rating"
@@ -82,22 +82,22 @@ const AddToList: React.FC<IProps> = ({people, setPeople}) => {
             <input 
             type="text"
             placeholder="Attending"
-            className='AddToList-input'
+            className='addtolist-input'
             value={input.attending}
             onChange={handleChange}
             name="attending"
             />
             <textarea
-            placeholder="Note"
-            className='AddToList-input'
+            placeholder="Leave a review..."
+            className='addtolist-textarea'
             value={input.note}
             onChange={handleChange}
             name="note"
             />
             <button 
-            className="AddToList-button"
+            className="addtolist-input__button"
             onClick={handleClick}
-            />
+            >Confirm</button>
         </div>
     )
 }

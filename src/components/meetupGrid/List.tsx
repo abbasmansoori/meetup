@@ -1,7 +1,7 @@
 import React from "react";
 import AddToList from "./AddToList";
 import {IState as IProps} from "../meetupGrid/Card";
-
+import "./list.scss";
 
 
 const List: React.FC<IProps> = ({ people }) => {
@@ -10,10 +10,10 @@ const List: React.FC<IProps> = ({ people }) => {
       return (
         <li className="list">
           <div className="list-header">
-            <h3>name: {person.name}</h3>
-            <h2>rating: {person.rating}</h2>
-            <h2>Attending: {person.attending}</h2>
-            <p className="list-note">review: {person.note}</p>
+            <h3 className="list-header__name"><em>Name:</em> {person.name}</h3>
+            <h2 className="list-header__rating"><em>Rating:</em> {person.rating}</h2>
+            <h2 className="list-header__attending"><em>Attending:</em> {person.attending}</h2>
+            <p className="list-header__note"><em>Review:</em> {person.note}</p>
           </div>
         </li>
       );
@@ -22,7 +22,7 @@ const List: React.FC<IProps> = ({ people }) => {
 
   return (
     <div>
-      <ul>{renderList()}</ul>
+      <ul className="ulist">{renderList()}</ul>
       
     </div>
   );

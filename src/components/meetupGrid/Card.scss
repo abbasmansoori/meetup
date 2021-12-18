@@ -11,7 +11,22 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     transition: 0.6s;
     &:hover {
-      transform: scale(1.1);
+      box-shadow: 0px 0px 10px rgba(48, 43, 43, 0.5);
+    }
+
+    .card-title{
+        font-size: 20px;
+        font-weight: 500;
+        color: rgb(182, 182, 182);
+        margin-bottom: 10px;
+    }
+
+    .card-date{
+        font-style: italic;
+        font-size: 14px;
+        font-weight: 500;
+        color: rgb(182, 182, 182);
+        margin-bottom: 10px;
     }
   
 }

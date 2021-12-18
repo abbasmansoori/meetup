@@ -16,6 +16,7 @@ const Header = ({searchText, setSearchText}: Props) => {
         {/* <form className="main-header__search-box" onSubmit={props.handleSearch}> */}
         <form className="main-header__search-box">
           <input
+            placeholder="Search Meetup"
             type="text"
             value={searchText}
             onChange={event => setSearchText(event.target.value)}
