@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Meetup } from "../../models/Meetup";
 import List from "./List";
 import "./Card.scss";
@@ -28,6 +28,10 @@ const Card = ({ meetup }: Props) => {
 
   return (
     <section className="card">
+      <img src={meetup.url}
+      alt="meetup"
+      className="card-image"
+      />
       <h3 className="card-title">{meetup.title}</h3>
       <p className="card-date">{meetup.date}</p>
       <List people={people} />

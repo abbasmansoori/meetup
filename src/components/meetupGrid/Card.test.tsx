@@ -9,7 +9,8 @@ describe("Card component", () => {
       title: "test", date: "test", id: 1,
       name: "",
       rating: 0,
-      note: ""
+      note: "",
+      url: ""
     };
     render(<Card meetup={testData} data={[]} />);
   });
@@ -19,7 +20,8 @@ describe("Card component", () => {
       title: "test", date: "test", id: 2,
       name: "",
       rating: 0,
-      note: ""
+      note: "",
+      url: ""
     };
     render(<Card meetup={testData} data={[]} />);
     screen.getAllByText(testData.title);

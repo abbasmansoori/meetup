@@ -72,6 +72,8 @@ const AddToList: React.FC<IProps> = ({people, setPeople}) => {
             />
             <input 
             type="number"
+            min={0}
+            max={5}
             placeholder="Rating"
             className='addtolist-input'
             value={input.rating}
