@@ -44,7 +44,7 @@ export const data: Meetup[] = [
   {
     id: 5,
     title: "Anime Watch",
-    date: "2022-01-01",
+    date: "2022-06-01",
     name: "",
     rating: 0,
     note: "",
@@ -53,7 +53,7 @@ export const data: Meetup[] = [
   {
     id: 6,
     title: "Wine Tasting",
-    date: "2022-01-01",
+    date: "2022-07-01",
     name: "",
     rating: 0,
     note: "",
@@ -79,7 +79,7 @@ const Grid: React.FC<Props> = ({searchText}) => {
      setFilteredEvents([...data])
    }
     
-  }, [filteredEvents, searchText])
+  }, [searchText])
   return (
     <main className="card-grid">
       {filteredEvents.map((meetup) => (
