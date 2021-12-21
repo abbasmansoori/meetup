@@ -1,5 +1,5 @@
 import React from "react";
-import AddToList from "./AddToList";
+
 import {IState as IProps} from "../meetupGrid/Card";
 import "./list.scss";
 
@@ -8,7 +8,7 @@ const List: React.FC<IProps> = ({ people }) => {
   const renderList = (): JSX.Element[] => {
     return people.map((person) => {
       return (
-        <li className="list">
+        <li key={Math.random()} className="list">
           <div className="list-header">
             <h3 className="list-header__name"><em>Name:</em> {person.name}</h3>
             <h2 className="list-header__rating"><em>Rating:</em> {person.rating}</h2>
