@@ -1,8 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import Card from "./Card";
+import Grid, {data} from "./Grid"
 import { Meetup } from "../../models/Meetup";
 
 describe("Card component", () => {
+ 
   it("renders without errors", () => {
     //smoke test
     const testData: Meetup = {
@@ -105,5 +107,6 @@ describe("Card component", () => {
     expect(dates[4].textContent).toBe("2022-06-01");
     expect(dates[5].textContent).toBe("2022-07-01");
   });
+
 
 });
