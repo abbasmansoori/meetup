@@ -75,10 +75,8 @@ describe("AddToList component", () => {
     expect(alertSpy).toHaveBeenCalled();
   });
 
-  
+ 
 
 
 
-    
-    
 });
