@@ -59,6 +59,15 @@ export const data: Meetup[] = [
     note: "",
     url: "https://spacehuntr.com/wp-content/uploads/2020/11/Wine-Tasting-Paris-via-masterclass.jpg"
   },
+  {
+    id: 7,
+    title: "Wine Tasting",
+    date: "2030-07-01",
+    name: "",
+    rating: 0,
+    note: "",
+    url: "https://spacehuntr.com/wp-content/uploads/2020/11/Wine-Tasting-Paris-via-masterclass.jpg"
+  },
 ];
 
 interface Props {
@@ -82,7 +91,9 @@ const Grid: React.FC<Props> = ({searchText}) => {
   }, [searchText])
   return (
     <main className="card-grid">
+      {/* {console.log(new Date(filteredEvents[0].date).getFullYear() - new Date().getFullYear())} */}
       {filteredEvents.map((meetup) => (
+        new Date(meetup.date).getFullYear() - new Date().getFullYear() > -1 &&
         <Card key={meetup.id} meetup={meetup} 
         data={data} 
         />

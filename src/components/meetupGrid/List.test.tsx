@@ -11,6 +11,7 @@ describe("List component", () => {
   it("should render the list values", () => {
     
     const testData: IProps = {
+      //importerar testdata från /Card.tsx
         people: [
             {
                 name: "",
